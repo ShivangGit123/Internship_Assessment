@@ -1,128 +1,147 @@
 # 📊 Trader Performance vs Market Sentiment  
-### *Analyzing Hyperliquid Trading Data with the Bitcoin Fear & Greed Index*
+### *Internship Assessment – Data Analysis using Hyperliquid Trading Data & Bitcoin Fear–Greed Index*
+
+This project analyzes how **market sentiment** influences **trader performance** by combining:
+
+- **Hyperliquid historical trading data**, and  
+- The **Bitcoin Fear & Greed Index**
+
+It uncovers key behavioral patterns such as profitability during Greed/Fear phases, risk-taking tendencies, win-rate variations, and correlations between PnL and sentiment.
 
 ---
 
-## 📌 Overview
+# 📁 Project Structure
 
-Using Python and basic data science libraries, this project:
 
-1. **Cleans and prepares** both datasets  
-2. **Converts timestamps** into usable dates  
-3. **Merges trade data with sentiment**  
-4. Performs **EDA** including:
-   - Fear vs Greed cycles  
-   - PnL over time  
-   - Average PnL by sentiment  
-   - Position size vs sentiment  
-   - Win rate vs sentiment  
-   - Correlation heatmap  
-5. Produces **insights on trader behavior** during different sentiment phases  
-
----
-
-## 📁 Project Structure
 
 ```
-📦 project-folder
- ┣ 📜 Insights.ipynb
- ┣ 📜 requirements.txt
- ┣ 📊 historical_data.csv
- ┣ 📊 fear_greed_index.csv
- ┗ 📜 README.md
+Internship_Assessment/
+│
+├── fear_greed_index.csv       # Sentiment dataset
+├── historical_data.csv        # Hyperliquid trading dataset
+├── Insights.ipynb             # Main analysis notebook
+└── requirements.txt           # Python dependencies
 ```
 
 ---
 
-## 📄 Datasets
+# 🚀 Getting Started
 
-### 1. Fear & Greed Index  
-Contains:
-- `date`  
-- `value`  
-- `classification`  
+## 1️⃣ **Clone the Repository**
 
-### 2. Hyperliquid Execution Data  
-Contains:
-- `Timestamp`  
-- `Execution Price`  
-- `Size USD`  
-- `Side`  
-- `Closed PnL`  
-
----
-
-## 🧹 Data Preparation
-
-- Converted UNIX timestamps  
-- Extracted date column  
-- Selected relevant columns  
-- Merged datasets  
-- Added win-rate flag  
-- Cleaned missing values  
-
----
-
-## 📊 Exploratory Analysis
-
-- Market sentiment timeline  
-- Trader PnL over time  
-- Average PnL per sentiment  
-- Risk appetite (position size vs sentiment)  
-- Win rate vs sentiment  
-- PnL–Sentiment correlation  
-
----
-
-## 🧠 Key Findings
-
-- **Best performance** occurs during *Greed*  
-- **Worst performance** occurs during *Extreme Fear*  
-- Traders take **larger positions** during Greed phases  
-- **Win rate is higher** when sentiment is positive  
-- Strong **positive correlation** between sentiment value and PnL  
-
-These findings show that market psychology has a measurable effect on trading outcomes.
-
----
-
-## 🛠 Technologies Used
-
-- Python  
-- Pandas  
-- Numpy  
-- Matplotlib  
-- Seaborn  
-- Jupyter Notebook  
-
----
-
-## ▶️ Running the Project
-
-### 1. Install dependencies
+```bash
+git clone https://github.com/ShivangGit123/Internship_Assessment.git
+cd Internship_Assessment
 ```
+
+---
+
+# 🛠️ Installation
+
+Install dependencies using:
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 2. Open the notebook
-```
-jupyter notebook Insights.ipynb
-```
+Dependencies include:
 
-### 3. Run all cells
+- pandas  
+- numpy  
+- matplotlib  
+- seaborn  
 
----
-
-## ⭐ Future Enhancements
-
-- Add volatility indicators  
-- Build sentiment-driven trading model  
-- Deploy as a Streamlit dashboard  
-- Integrate real-time sentiment API  
+(Exactly as provided in your `requirements.txt`)
 
 ---
 
-## ✨ Author
+# ▶️ Running the Notebook
+
+Launch Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
+
+Then open:
+
+```
+Insights.ipynb
+```
+
+Run all cells to reproduce:
+
+- Data cleaning  
+- Timestamp conversions  
+- Dataset merging  
+- EDA visualizations  
+- Performance metrics  
+- Final insights  
+
+---
+
+# 📊 What This Project Does
+
+### ✔️ Cleans and prepares the datasets  
+- Converts UNIX → datetime  
+- Removes unneeded columns  
+- Extracts date for merging  
+
+### ✔️ Merges sentiment with trading performance  
+Joining on the **date** column.
+
+### ✔️ Performs complete EDA including:
+- Sentiment cycles (Fear → Greed)  
+- PnL timeline  
+- Avg PnL by sentiment  
+- Position size vs sentiment  
+- Win-rate analysis  
+- Correlation heatmap  
+
+### ✔️ Generates final insights on trader behavior:
+- When the trader performs best  
+- How sentiment affects risk-taking  
+- Which market phases cause losses  
+- Statistical relationships between sentiment & PnL  
+
+---
+
+# 🧠 Key Findings
+
+- **Best performance** occurs during **Greed**  
+- **Worst performance** occurs during **Extreme Fear**  
+- Trader takes **larger positions** when sentiment is high  
+- Win-rate improves with increasing sentiment score  
+- Strong positive **correlation** between PnL and sentiment  
+
+These patterns clearly show that market psychology significantly affects trading outcomes.
+
+---
+
+# 📦 Files Explained
+
+| File | Description |
+|------|-------------|
+| `historical_data.csv` | Raw Hyperliquid trading dataset |
+| `fear_greed_index.csv` | Bitcoin sentiment index data |
+| `Insights.ipynb` | Full analysis notebook |
+| `requirements.txt` | Python dependencies |
+
+---
+
+# 🌱 Future Enhancements
+
+- Add volatility metrics (ATR, Std Dev)  
+- Build a sentiment-driven trading strategy model  
+- Create a Streamlit dashboard  
+- Add real-time API for Fear & Greed Index  
+
+---
+
+# ✨ Author
 
 **Shivang Mishra**  
-Data Science & Machine Learning Enthusiast
+Data Science & Machine Learning Enthusiast  
+GitHub: https://github.com/ShivangGit123  
+
+---
